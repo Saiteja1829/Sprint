@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CAB~WHEEL</title>
+
+   <!--Mobile & Computer View-->
+  <link rel="stylesheet" href="/style.css"> 
+
+
+<script src="main.js" defer></script>
+  <!-- Custom Styles -->
+  
+<!--star rating-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+  
+    <!-- pop up -->
+  <div id="Noticepopup" class="Noticepopup">
+<img src="/IMAGES/Not.png" class="closes" onclick="closeNotice()" alt="X">
+<div class="popup-content">
+<p>COPYRIGHT CLAIM'S NOTICE</p>
+<p>Images you seen are gathered from different platforms.We are not owner of them. They belong to their respective owners.</p> <p>Used for demonstration purposes.</p>
+</div>
+</div>
+
+
+
+  
+  <!-- login -->
+
+  <div class="wrapper">
+    <img class="closeleft" id="closeleft" 
+    src="/IMAGES/Exit.png" alt="Exit">
+    
+        <img class="closeright" id="closeright" src="/IMAGES/Exit.png" alt="Exit">
+      <div class="form-wrapper signin-wrapper">
+        <form action="#">
+          <h1>Sign in</h1>
+          <div class="socials">
+          
+            <a href="#"><i class="fab fa-google"></i></a>
+
+          </div>
+          <span>or Use Your Credentials</span>
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <a href="#">Forgot password?</a>
+          <button>Sign In</button>
+        </form>
+      </div>
+
+      <div class="overlay-wrapper">
+        <div class="overlay">
+          <div class="overlay-panel overlay-right">
+            <h1>Not A User?</h1>
+            <p>Create your "CAB~SPRINT" account to access our services</p>
+            <button class="border signup-btn">Sign Up</button>
+          </div>
+
+          <div class="overlay-panel overlay-left">
+            <h1>Already A User?</h1>
+            <p>Login into your "CAB~SPRINT" account to access our services</p>
+            <button class="border signin-btn">Sign In</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-wrapper signup-wrapper">
+        <form action="#">
+          <h1>Create Account</h1>
+
+          <div class="socials">
+           
+            <a href="#"><i class="fab fa-google"></i></a>
+          
+          </div>
+
+          <span>or Use Your Email For Registration</span>
+          <input type="text" placeholder="Name" required /> 
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button>Sign Up</button>
+        </form>
+      </div>
+    </div>
+   
+    
+   
+<!--NAVIGATION BAR-->
+
+
+<nav class="nav">
+  <a href="#" class="logo">CAB~SPRINT</a>
+  <ul>
+    <li><a href="#Section-1" class="item active" onclick="scrollToSection('.Section-1', this)">Home</a></li>
+    <li><a href="#Section-2" class="item" onclick="scrollToSection('.Section-2', this)">Services</a></li>
+    <li><a href="#Section-3" class="item" onclick="scrollToSection('.Section-3', this)">Reviews</a></li>
+    <li><a href="#Section-4" class="item" onclick="scrollToSection('.Section-4', this)">About</a></li>
+    <li><a href="#Section-5" class="item" onclick="scrollToSection('.Section-5', this)">Contact</a></li>
+    <span class="indicator"></span>
+  </ul>
+  <a class="McButton" data-hamburger-menu>
+    <b></b>
+    <b></b>
+    <b></b>
+  </a>
+</nav>
+
+<!--A div that covers whole sections except navigation section-->
+   
+   
+   <div class="Wholemain" id="blur">
+
+
+
+
+    <!--section 1-->
+<div class="Section-1">
+      
+  <h1 class="Title-1">
+    - SPRINT YOUR TRAVEL WITH CAB SPRINT -
+  </h1>
+  
+  <div class="Text-1">
+      <p>
+    Travel is always great.And also your needs to shift from places .So waiting for buses is what drains your Time.
+  </p>
+  <p>
+    Not A Problem <span class="sprint">'CAB~SPRINT' </span>  will take you to where you wish.
+  </p><br>
+
+
+  </div>
+  <a class="bn31" id="bn31"><span class="bn31span">LOGIN</span></a>
+    <img class="Tour" src="/IMAGES/Tour.png" alt="Taxi">
+    
+
+</div>
+
+
+
+<!--Ride booking service-->
+
+<div class="Ride-Booking">
+  <h1 class="Ride">RIDE BOOKING</h1>
+  <div class="location-section">
+
+    <form>
+        <label for="your-location">YOUR LOCATION:</label><br>
+        <input  type="text" id="your-location" name="your-location" placeholder="Your-Location" required><br><br><br>
+        
+        <label for="destination">DESTINATION:</label><br>
+        <input type="text" id="destination" name="destination" placeholder="Destination" required><br><br>
+        
+         
+  <button class="bn54" onclick="validate()">
+    <span class="bn54span">RIDE</span>
+  </button>
+
+    </form>
+    </div>
+   <img class="Your-location" src="/IMAGES/Location Navigation.png" alt="Location">
+   <img class="Booking" src="/IMAGES/Phone Booking.png" alt="Booking">
+
+  
+  
+  
+  <div class="Choose">
+  
+  <form id="fitForm">
+      <h4>CHOOSE YOUR FIT</h4>
+  <label>
+    <input type="radio" name="option" value="option1" required>
+    <img  class="Size"src="/IMAGES/L.png" alt="Option 1">
+    L
+  </label><br>
+  <label>
+    <input type="radio" name="option" value="option2">
+    <img  class="Size"src="/IMAGES/XL.png" alt="Option 2">
+    XL
+  </label><br>
+  <label>
+    <input type="radio" name="option" value="option3">
+     <img  class="Size"src="/IMAGES/XXL.png" alt="Option 3">
+    XXL
+  </label><br>
+  
+</form>
+  
+</div>
+
+
+<div class="Quantityservice">
+  <label for="quantity">Quantity:</label ><br>
+  <select id="quantity" name="quantity">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+</div>
+
+  
+</div>
+
+
+
+
+<!-- Section 2-->
+<div class="Section-2">
+  <h1>"What's unique value do we bring?"</h1><br>
+    <h2>FIXED PRICE</h2>
+  
+  <div class="Service-1">
+  
+    <img  class="Price" src="/IMAGES/Fixed price.png" alt="Fixed price">
+    <p>YOUR COMFORT IS OUR TOP PRIORITY. SIT BACK, RELAX, AND ENJOY YOUR RIDE WITHOUT WORRYING ABOUT FLUCTUATING PRICES – IT'S ALREADY FIXED.</p>
+  </div>
+  
+  
+      <h2>NO-COMMISION</h2>
+  <div class="Service-2">
+<p>Zero commissions, no negotiations.<br> Your fare directly benefits our elite crew. <br>We prioritize a smooth ride for all, ensuring maximum comfort for both travelers and chauffeurs.</p>
+    <img class="commission" src="/IMAGES/No commission.png" alt="No comission">
+  </div>
+  
+  
+      <h2>ECO-FRIENDLY</h2>
+  <div class="Service-3">
+
+    <img class="Eco-friendly" src="/IMAGES/Hand Shake.png" alt="Eco-friendly">
+    <p>WITHOUT YOUR SUPPORT WE ARE NOTHING.<br>WE RESPECT OUR TRAVELER'S WITHOUT ANY HESITATION'S.</p>
+  </div>
+  
+  
+    <h2>NO MORE WAIT</h2>
+  <div class="Service-4">
+  
+      <p>
+    FED UP OF WAITING? <br>EAGER TO UNWIND? <br>WE'RE EN ROUTE TO FETCH YOU.<br> NO MORE HASSLES OR BUS DELAYS. <br>JUST BOOK OUR SERVICE.</p>
+    <img class="No-Waiting" src="/IMAGES/Waiting.png" alt="No wait">
+
+   
+  </div>
+ 
+ 
+ 
+   <h2>REACH FAST</h2> 
+<div class="Service-5">
+
+  <img class="Speed" src="/IMAGES/Speed.png" alt="speed">
+  <p>YOUR TIME IS PRECIOUS TO US. REST ASSURED, WE'LL DO OUR UTMOST TO SWIFTLY TAKE YOU TO YOUR DESTINATIONS AMIDST VARYING TRAFFIC CONDITIONS.</p>
+</div>
+
+
+    <h2>YOUR LUGGAGE NEVER MISS</h2>
+
+  <div class="Service-6">
+<p>TRUST IS PARAMOUNT TO US. <br>NEVER WORRY ABOUT LOST LUGGAGE.<br> JUST PROVIDE YOUR TAXI BOOKING NUMBER, AND WE'LL SWIFTLY RETURN YOUR BELONGINGS, WHEREVER YOU MAY BE.</p>
+    <img class="Luggage" src="/IMAGES/Luggage.png" alt="Luggage">
+  </div>
+
+   <h2>MUTIPLE DESTINATIONS</h2>
+    <div class="Service-7">
+     
+  <img class="Locations" src="/IMAGES/Locations.png" alt="Locations">
+  <p>EXPERIENCE SEAMLESS TRAVEL WITH US.<br> WE'LL TAKE YOU TO EVERY DESTINATION ON YOUR LIST.</p>
+</div>
+
+</div> 
+
+
+
+<!--section 3-->
+<div class="Section-3">
+ <div class=" Carousel-Whole">
+   <h2>OUR CREWS EXPERIENCES</h2>
+   
+  <div class="carousel">
+      
+
+ <div class="carousel-item">
+          
+  <div class="Profile">
+  <img class="picture" src="/Portraits/Grey white.png" alt="Black">
+    </div>
+          
+ <div class="Review">
+      <h3>JACK</h3>
+<p>" Smooth driving, eco-friendly approach, low costs—unforgettable trip! Definitely recommend Cab Sprint! "</p>
+            </div>
+          </div>
+          
+          
+ <div class="carousel-item">
+   <div class="Profile">
+ <img class="picture" src="/Portraits/Yellow.png" alt="Black">
+    </div>
+          
+   <div class="Review">
+    <h3>JESSICA</h3>
+   <p> " Company's no commission, low costs stood out. Plus, multiple stops in one ride? Brilliant! " </p>
+             </div>
+       </div>
+        
+        
+  <div class="carousel-item">
+   <div class="Profile">
+  <img class="picture" src="/Portraits/Dark Orange.png" alt="Black">
+          </div>
+   <div class="Review">
+    <h3>ALEX</h3>
+    <p>" Great ride assured with Cab Sprint's range of vehicles, affordable prices. My go-to choice now! " </p>
+           </div>
+        </div>
+        
+        
+        
+ <div class="carousel-item">
+  <div class="Profile">
+<img class="picture" src="/Portraits/Brown Blue.png" alt="Black">
+          </div>
+  <div class="Review">
+   <h3>MARIA</h3>
+    <p>" Cab Sprint's eco-friendly approach—made me a loyal customer! Low delivery charges are a huge bonus! " </p>
+      </div>
+     </div>
+        
+        
+        
+ <div class="carousel-item">
+  <div class="Profile">
+  <img class="picture" src="/Portraits/Green.png" alt="Black">
+          </div>
+          
+ <div class="Review">
+     <h3>TONY</h3>
+  <p>" Convenience of multiple locations, low costs, fast drives—exceeded expectations! Sticking with Cab Sprint! " </p>
+           </div>
+         </div>
+        
+        
+        
+        
+ <div class="carousel-item">
+     <div class="Profile">
+<img class="picture" src="/Portraits/Sky blue.png" alt="Black">
+          </div>
+          
+ <div class="Review">
+   <h3>PEPPER</h3>
+ <p>"Absolutely a game-changer for me aswell for you ! I CAN REACH ANYWHERE WITHIN TIME."
+            </p>
+       </div>
+          </div>
+          
+          
+          
+                    
+           
+  <div class="carousel-item">
+   <div class="Profile">
+<img class="picture" src="/Portraits/Dark Grey.png" alt="Black">
+          </div>
+          
+   <div class="Review">
+       <h3>PETER</h3>
+<p>" From booking to drop-off, seamless experience.<br>
+Never choosing another ride service! " 
+</p>
+           </div>
+          </div>
+        
+        
+<div class="carousel-item">
+  <div class="Profile">
+<img class="picture" src="/Portraits/Light Yellow.png" alt="Black">
+      </div>
+          
+  <div class="Review">
+     <h3>SOPHIA</h3>
+  <p>" Made my day! Range of vehicles suits every need. Highly recommend! " </p>
+          </div>
+         </div>
+        
+        
+        
+<div class="carousel-item">
+<div class="Profile">
+ <img class="picture" src="/Portraits/Orange.png" alt="Black">
+    </div>
+          
+  <div class="Review">
+     <h3>GEORGE</h3>
+   <p> " No commission and low costs really impressed me. Cab Sprint is now my go-to ride service! " </p>
+             </div>
+       </div>
+        
+      
+  <div class="carousel-item">
+   <div class="Profile">
+  <img class="picture" src="/Portraits/Browngrey.png" alt="Black">
+    </div>
+          
+ <div class="Review">
+   <h3>ELSIE</h3>
+  <p> " My trip goes on smooth and stress-free.Cab Sprint is now my top choice for rides! " </p>
+            </div>
+          </div>
+        
+     
+  <div class="carousel-item">
+   <div class="Profile">
+  <img class="picture" src="/Portraits/Black.png" alt="Black">
+       </div>
+          
+   <div class="Review">
+    <h3>NOAH</h3>
+    <p>" Just finished a Cab Sprint ride, what an experience! Multiple stops in one trip? Nostalgic. "</p>
+             </div>
+           </div>
+        
+        
+        
+        
+<div class="carousel-item">
+    <div class="Profile">
+     <img class="picture" src="/Portraits/Red.png" alt="Black">
+          </div>
+          
+<div class="Review">
+    <h3>NORA</h3>
+   <p>" Cab Sprint is Fast, cost-effective rides redefine travel. Diverse vehicles for every journey. Undoubtedly amazing! "</p>
+             </div>
+          </div>
+        
+        
+
+          
+<div class="carousel-item">
+    <div class="Profile">
+     <img class="picture" src="/Portraits/Brown orange.png" alt="Black">
+          </div>
+          
+<div class="Review">
+    <h3>NATHEN</h3>
+   <p>" Ethos and budget-friendly fares make every trip a win. Plus, the convenience of multiple destinations in one ride. "</p>
+             </div>
+          </div>
+        
+<div class="carousel-item">
+    <div class="Profile">
+     <img class="picture" src="/Portraits/Blue red.png" alt="Black">
+          </div>
+          
+<div class="Review">
+    <h3>EMILY</h3>
+   <p>" Phenomenal ride! No commission, low costs, diverse fleet. Ride with the best! " </p>
+             </div>
+          </div>
+          
+ <div class="carousel-item">
+    <div class="Profile">
+     <img class="picture" src="/Portraits/Grey.png" alt="Black">
+          </div>
+          
+<div class="Review">
+    <h3>CHARLES</h3>
+   <p>" Cab Sprint,The epitome of excellence in ride services!.
+   Budget-friendly fares, they've set a new standard. "</p>
+             </div>
+          </div>
+
+<div class="carousel-item">
+    <div class="Profile">
+     <img class="picture" src="/Portraits/Orange white.png" alt="Black">
+          </div>
+          
+<div class="Review">
+    <h3>CHARLOTTE</h3>
+   <p>" Embarked on a Cab Sprint adventure and it was beyond compare! "</p>
+             </div>
+          </div>
+          
+<div class="carousel-item">
+    <div class="Profile">
+     <img class="picture" src="/Portraits/Blue white.png" alt="Black">
+          </div>
+          
+<div class="Review">
+    <h3>ROGERS</h3>
+   <p>" Eco-friendly approach and unbeatable prices make every ride a delight. "</p>
+             </div>
+          </div>
+          
+<div class="carousel-item">
+    <div class="Profile">
+     <img class="picture" src="/Portraits/Blue yellow.png" alt="Black">
+          </div>
+          
+<div class="Review">
+    <h3>OLIVIA</h3>
+   <p>" Just experienced Cab Sprint—next-level service! They're my top choice now. Multiple stops in one trip? Unbeatable convenience! "</p>
+             </div>
+          </div>
+          
+</div>
+         
+      </div>
+ 
+<!-- Rating -->
+  
+  <div class="Emojiwrapper">
+  <input type="radio" name="rate" id="star-1" value="1">
+  <input type="radio" name="rate" id="star-2" value="2">
+  <input type="radio" name="rate" id="star-3" value="3">
+  <input type="radio" name="rate" id="star-4" value="4">
+  <input type="radio" name="rate" id="star-5" value="5">
+  <div class="content">
+    <div class="outer">
+      <div class="emojis">
+        <li class="slideImg"><img src="/IMAGES/Bad.png" alt="Bad"></li>
+        <li><img src="/IMAGES/Hopeful.png" alt="Hopeful"></li>
+        <li><img src="/IMAGES/Good.png" alt="Good"></li>
+        <li><img src="/IMAGES/Awesome.png" alt="Awesome"></li>
+        <li><img src="/IMAGES/Nostalgic.png" alt="Nostalgic"></li>
+      </div>
+    </div>
+    <div class="stars">
+      <label for="star-1" class="star-1 fas fa-star"></label>
+      <label for="star-2" class="star-2 fas fa-star"></label>
+      <label for="star-3" class="star-3 fas fa-star"></label>
+      <label for="star-4" class="star-4 fas fa-star"></label>
+      <label for="star-5" class="star-5 fas fa-star"></label>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="text"></span>
+    <span class="numb"></span>
+  </div>
+
+  <form id="feedback-form" action="#" onsubmit="return validateReview();">
+    <header></header>
+    <div class="Feedback-text">
+      <textarea id="my-text" maxlength="155" rows="8" placeholder="CAN WE KNOW YOUR EXPERIENCE..." required></textarea>
+      <p id="count-result">Total characters: 0/155</p>
+    </div>
+    <div class="btn">
+      <button type="submit" class="btn">Post</button>
+    </div>
+  </form>
+</div>
+
+<div class="Thankspop" id="Thankspop">
+  <img src="/IMAGES/Ok Mark.png" alt="✅">
+  <h2>Thank You!</h2>
+  <p>Your Feedback has been successfully submitted. Thanks!</p>
+  <button type="button" onclick="closePopup()">OK</button>
+</div>
+       
+
+
+            <!--section 4-->
+  
+ <div class="Section-4">
+   <h1>WE ARE THE TEAM OF CAB~SPRINT </h1>
+   
+
+   
+      <div class="About">
+  
+     <p>WE ARE THE TEAM OF FEW BUT AS YOU KNOW GREATNESS ALWAYS BEGIN'S FROM SMALL BEGINNING'S.</p>
+ <p>WE JUST NEED YOU NOTHING ELSE REQUIRED .ITS NOT ABOUT MONEY BECAUSE WE COMMITTEE TO DELIVERY COMFORT TO ALL IN HIGH LEVEL WITH LOW PRICES.</p>
+     <p>WE ARE A GROWING ONE'S.AT ANYTIME WE LOOK ON TO OUR CREW'S FEEDBACK'S AS WE MISS ANY FEATURES THAT THEY EXPECT.</p>
+     <p>THINGS ALWAYS CHANGE BUT NOT WE AS WE ALWAYS  WORK FOR PEOPLE NOT FOR GOVERNMENT WITHOUT PEOPLE NO GOVERNMENT IS THERE. </p>
+     <p>IF YOU FIND ANY TAX ISSUES FROM WHEEL MAN'S OF CAB SPRINT. YOU CAN MAKE A NOTE OF HIM LIKE HIS NAME OR TAXI NUMBER OR YOUR BOOKING TIME.TO CATCH FAULT'S IN US.</p>
+     <p>THIS PLATFORM IS INDEPENDENT ONLY TWO PARTIES HAVE ACTIVE ALL TIME . WHEEL MAN AND TRAVELER</p>
+     <p>OUR WORK IS TO DELIVERY ECO-FRIENDLY ENVIRONMENT TO MAKE EVERY TRAVEL CHILL AND COOL.AND DELIVERY WHAT OUT NOSTALGIC CREW EXPECT.</p>
+     <p>FINALLY , READY TO SPRINT YOUR 
+     TRAVELING WITH OUR SERVICES.</p>
+     
+     
+   </div>
+   
+  
+
+
+
+
+
+   
+   <div class="few">
+   <img class="Owners" src="/IMAGES/About us.png" alt="About us">
+
+   </div>
+   
+ 
+   <div class="Ride-Lance">
+
+    
+    <img class="Contribution"src="/IMAGES/Drive contribution.png" alt="READY TO">
+       <a href="/Freelance-Drive.html" target="_blank">
+          <h2>" Contribute Ride "</h2>
+    </a>  
+ </div>
+ 
+
+
+
+
+ </div>
+ 
+ 
+ 
+ 
+ 	<nav class="accordion arrows">
+		<header class="box">
+			<label for="acc-close" class="box-title">SPRINTING FAQ'S </label>
+		</header>
+		
+		<input type="radio" name="accordion" id="cb1" />
+		<section class="box">
+		  	<label class="box-title" for="cb1">1. What makes Cab Sprint different from other cab services? </label>
+			<label class="box-close" for="acc-close"></label>
+<div class="box-content">
+			  Cab Sprint is a commission-free, eco-friendly cab service with multiple stops, lower waiting charges, direct driver payments, and reliable luggage return.
+			</div>
+		</section>
+		
+		
+		<input type="radio" name="accordion" id="cb2" />
+		<section class="box">
+	<label class="box-title" for="cb2">2 .What safety measures does Cab sprint have in place?</label>
+			<label class="box-close" for="acc-close"></label>
+	<div class="box-content">
+			  Safety is our top priority. All our drivers undergo thorough background checks and regular vehicle inspections to ensure a safe and comfortable ride for our passengers.
+	</div>
+		</section>
+		
+		
+		<input type="radio" name="accordion" id="cb3" />
+		<section class="box">
+<label class="box-title" for="cb3">3. Are there any additional fees involved ?</label>
+	<label class="box-close" for="acc-close"></label>
+	<div class="box-content">
+			No, there are no additional fees for choosing an eco-friendly vehicle. All our vehicles are competitively Price Fixed to offer you the best value for your ride.  
+			</div>
+		</section>
+
+		
+<input type="radio" name="accordion" id="cb4"/>		
+		<section class="box">
+	<label class="box-title" for="cb4">
+	  4. How do I book a ride with Cab Sprint?</label>
+			<label class="box-close" for="acc-close"></label>
+			<div class="box-content">Booking a ride is simple. You can use our app or website to book a cab, enter your pick-up and drop-off locations, and any additional stops you need.</div>
+		</section>
+		
+
+<input type="radio" name="accordion" id="cb5"/>		
+		<section class="box">
+	<label class="box-title" for="cb5">
+	  5. How does Cab Sprint handle waiting charges?</label>
+			<label class="box-close" for="acc-close"></label>
+			<div class="box-content">
+Our waiting charges are minimal compared to other services. We understand that delays happen, so we strive to make waiting affordable for our passengers. 
+			</div>
+		</section>
+
+
+<input type="radio" name="accordion" id="cb6"/>		
+		<section class="box">
+			<label class="box-title" for="cb6">6. What happens if I leave something in the cab?</label>
+			<label class="box-close" for="acc-close"></label>
+<div class="box-content">If you forget any luggage or personal items in the cab, don't worry. Our drivers will ensure that your belongings are safely returned to you, no matter where you are.</div>
+		</section>
+
+
+<input type="radio" name="accordion" id="cb7"/>		
+		<section class="box">
+<label class="box-title" for="cb7">
+  7. How can I provide feedback about my ride?</label>
+			<label class="box-close" for="acc-close"></label>
+<div class="box-content">We value your feedback. After your ride, you can rate your experience and leave comments through our app or website. Your input helps us improve our service.</div>
+		</section>
+
+
+<input type="radio" name="accordion" id="cb8"/>		
+		<section class="box">
+<label class="box-title" for="cb8">
+  8. How Can I make multiple stops during my trip? </label>
+			<label class="box-close" for="acc-close"></label>
+<div class="box-content">
+  Yes, Cab Sprint supports multiple stops. You can conveniently add stops to your route when booking your ride, making it easier to run errands or pick up friends.
+</div>
+		</section>
+		
+
+<input type="radio" name="accordion" id="cb9"/>		
+		<section class="box">
+<label class="box-title" for="cb9">
+ 9. Is there a middleman involved in the payment process? </label>
+			<label class="box-close" for="acc-close"></label>
+<div class="box-content">
+  At Cab Sprint, passenger payments go directly to the driver, ensuring transparency and fair earnings.
+</div>
+		</section>
+
+
+<input type="radio" name="accordion" id="cb10"/>		
+		<section class="box">
+<label class="box-title" for="cb10">
+10. Is there customer support available if I need help? </label>
+			<label class="box-close" for="acc-close"></label>
+<div class="box-content">
+  Absolutely. Our customer support team is available  to assist you with any issues or questions you may have. You can reach us via phone or email.
+</div>
+		</section>
+
+
+<input type="radio" name="accordion" id="acc-close" />		
+	</nav>
+	
+
+ 
+
+ 
+              <!--section-5-->
+  <div class="Section-5">
+    
+    <h2>ANY SUGGESTIONS OR COMPLAINT'S FEEL FREE TO INFORM TO US.<br> WE ARE HERE TO DELIVERY WHAT YOH EXPECT.</h2>
+ <div class="Contact-container">
+ 
+      <div class="About-form">
+
+<div class="Contact-image">
+  <img class="Contact-crew" src="/IMAGES/contact us.png" alt="Contact us">
+</div>
+      
+
+   <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="index.html" autocomplete="off">
+            <h3 class="About-title">Contact us</h3>
+            
+
+
+  <div class="input-container">
+              <input type="text" name="name" class="About-input" />
+              <label for="">Username</label>
+              <span>Username</span>
+       </div> 
+
+       
+     <div class="input-container">
+    <input type="email"name="email" class="About-input"/>
+    <label for="">Email</label>
+         <span>Email</span>
+       </div>
+            
+    <div class="input-container">
+   <input type="tel" name="phone" class="About-input"/>
+    <label for="">Phone</label>
+     <span>Phone</span>
+     </div>
+            
+    <div class="input-container textarea">
+    <textarea name="message" class="About-input"></textarea>
+      <label for="message">Message</label>
+     <span>Message</span>
+      </div>
+      
+            <input type="submit" value="Send" class="contact-btn" />
+          </form>
+        </div>
+         </div>
+         </div>
+ 
+ </div>
+
+      
+      
+      
+              
+              
+              
+              
+               </div>
+   
+
+        
+  <!--Years-->  
+<div class="Webstatus">
+   <h2>Copyright <span id="currentYear">  </span> CAB~SPRINT © All Rights Reserved.</h2>
+
+</div>        
+        
+        
+        
+        
+
+    
+    
+    
+    
+    
+    
+
+        
+         
+
+</body>
+</html>
